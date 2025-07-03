@@ -37,7 +37,7 @@ def main():
             for shot in shots:
                 if shot.is_colliding_with(asteroid):
                     shot.kill()
-                    asteroid.kill()
+                    asteroid.split()
                     destroyed = True
                     break
             if not destroyed and asteroid.is_colliding_with(player):
